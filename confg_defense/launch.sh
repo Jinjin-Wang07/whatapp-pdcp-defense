@@ -1,6 +1,9 @@
 #!/bin/bash
 
-PDCP_DEFENSE_PATH="/workspaces/fingerprinting/PDCP_defense"
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Navigate to the parent directory (PDCP_defense)
+PDCP_DEFENSE_PATH="$(dirname "$SCRIPT_DIR")"
 
 EPC="${PDCP_DEFENSE_PATH}/build/srsepc/src/srsepc"
 ENB="${PDCP_DEFENSE_PATH}/build/srsenb/src/srsenb"
